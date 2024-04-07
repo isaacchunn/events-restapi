@@ -5,19 +5,19 @@
 
 ```
 ├── api-test            # REST requests for databases
-├── db					# Database script to create db using SQLite3
-├── middlewares			# User authentication scripts
-├── models				# Scripts to handle queries
-├── routes   			# Routing scripts for each type of operations
-├── screenshots			# Screenshots for future use
-├── utils				# Utility scripts for hashing/jwt
-├── .gitignore			# 
-├── LICENSE 			#
-├── README 				# 
-├── api.db 				# SQLite db file for testing
-├── go.mod				# Project dependencies
-├── go.sum 				# 
-├── main.go 			# Main file for running 
+├── db			# Database script to create db using SQLite3
+├── middlewares		# User authentication scripts
+├── models		# Scripts to handle queries
+├── routes   		# Routing scripts for each type of operations
+├── screenshots		# Screenshots for future use
+├── utils		# Utility scripts for hashing/jwt
+├── .gitignore		# 
+├── LICENSE 		#
+├── README 		# 
+├── api.db 		# SQLite db file for testing
+├── go.mod		# Project dependencies
+├── go.sum 		# 
+├── main.go 		# Main file for running 
 
 ```
 ## ⭐ Screenshots
@@ -28,10 +28,10 @@
 > [!NOTE]
 The version of Go used is 1.22.2.
 Requirements:
-	1. Gin Framework
-	2. JWT
-	3. SQLite3
-	4. crypto/bcrypt
+1. Gin Framework
+2. JWT
+3. SQLite3
+4. crypto/bcrypt
 
 1. Open terminal in root directory.
 2. Install dependencies using go commands
@@ -54,7 +54,7 @@ Requirements:
 	go build
 	```
 > [!WARNING]
-> The frontend application is still in development and its very difficult to run commands on this API, even with Postman. 
+> The frontend application is still in development and its very difficult to run commands on this API without a clear UI, even with Postman. 
 
 
 
