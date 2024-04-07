@@ -1,6 +1,9 @@
 #  Events Management REST API
  An event management pilot project that allows basic creation of events, users and registering using JWT tokens and written in Go.
 
+ > [!WARNING]
+> The frontend application is still in development and its very difficult to run commands on this API without a clear UI, even with Postman. 
+
 ## 📁 Folder Structure
 
 ```
@@ -48,8 +51,3 @@ The version of Go used is 1.22.2. Requirements include Gin Framework, JWT, SQLit
 	//Builds the files
 	go build
 	```
-> [!WARNING]
-> The frontend application is still in development and its very difficult to run commands on this API without a clear UI, even with Postman. 
-
-
-
