@@ -26,12 +26,7 @@
 ## 📌 Setting Up
 
 > [!NOTE]
-The version of Go used is 1.22.2.
-Requirements:
-1. Gin Framework
-2. JWT
-3. SQLite3
-4. crypto/bcrypt
+The version of Go used is 1.22.2. Requirements include Gin Framework, JWT, SQLite3, bcrypt.
 
 1. Open terminal in root directory.
 2. Install dependencies using go commands
