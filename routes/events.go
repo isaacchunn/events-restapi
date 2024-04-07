@@ -9,6 +9,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/isaacchunn/rest-api/models"
+	"github.com/isaacchunn/rest-api/utils"
 )
 
 func getEvents(context *gin.Context) {
@@ -38,18 +39,33 @@ func getEvent(context *gin.Context) {
 }
 
 func createEvent(context *gin.Context) {
+
+	//Have to attach valid tokens to go on protected routes
+	token := context.Request.Header.Get("Authorization")
+	if token == "" {
+		//No token part of request
+		context.JSON(http.StatusUnauthorized, gin.H{"message": "Not authorized."})
+		return
+	}
+
+	//Handle for token
+	userID, err := utils.VerifyToken(token)
+	if err != nil {
+		context.JSON(http.StatusUnauthorized, gin.H{"message": "Not authorized."})
+		return
+	}
+
 	var event models.Event
 	//Works similar to scan in fmt package
 	//Must make sure the json is in similar structure
-	err := context.ShouldBindJSON(&event)
+	err = context.ShouldBindJSON(&event)
 
 	if err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"message": "Could not parse request data."})
 		return
 	}
 
-	event.ID = 1
-	event.UserID = 1
+	event.UserID = userID
 
 	//Save the event
 	err = event.Save()
